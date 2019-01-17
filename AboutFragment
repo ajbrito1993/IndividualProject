@@ -1,0 +1,63 @@
+package com.example.alexbrito.individuaproject;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class AboutFragment extends Fragment {
+    /** Create a LOG tag to keep track of Fragments lifecycles being called **/
+    private static final String TAG = "AboutFragment";
+
+
+    private ImageView switchYouthLogo;
+    private TextView aboutChurchTitle;
+    private TextView aboutChurchDescription;
+    private TextView aboutChurchTranslated;
+
+
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Log.d(TAG,"onCreate() called");
+
+
+    }
+
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+
+        View v = inflater.inflate(R.layout.fragment_about, container,false);
+        Log.d(TAG,"onCreateView() called");
+
+        switchYouthLogo = (ImageView) v.findViewById(R.id.switchYouthLogo);
+        aboutChurchTitle = (TextView) v.findViewById(R.id.aboutChurch);
+        aboutChurchDescription = (TextView) v.findViewById(R.id.aboutDescription);
+        aboutChurchTranslated = (TextView) v.findViewById(R.id.aboutDescriptionTranslated);
+
+
+        return v;
+    }
+    @Override
+    public void onResume(){
+        super.onResume();
+        Log.d(TAG, "onResume() called");
+    }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+        Log.d(TAG, "onPause() called");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.d(TAG,"onStop() called");
+    }
+
+}

@@ -1,0 +1,36 @@
+package com.example.alexbrito.individuaproject;
+
+/***Model Data for Leaders***/
+
+public class LeaderInfo {
+
+    String pastorName;
+    String description;
+
+
+    public LeaderInfo(String pastorName, String description) {
+        this.pastorName = pastorName;
+        this.description = description;
+    }
+
+    public LeaderInfo() {
+    }
+
+    public String getPastorName() {
+
+
+        return pastorName;
+    }
+
+    public void setPastorName(String pastorName) {
+        this.pastorName = pastorName;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+}
